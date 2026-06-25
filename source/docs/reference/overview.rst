@@ -7,8 +7,8 @@ classes — that reads text in that language and generates an abstract syntax tr
 your application can then process. It is a recursive-descent generator that can produce 
 parsers in **Java**, **Python**, **C#**, and **Rust** from the same grammar.
 
-Short History
--------------
+A Short History
+---------------
 
 CongoCC was originally developed as a fork of `JavaCC21 <https://github.com/javacc21/javacc21>`_, 
 which was itself a fork of the original `JavaCC <https://javacc.github.io/javacc/>`_.  ConngoCC's goal is

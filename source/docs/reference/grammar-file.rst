@@ -71,14 +71,14 @@ one that resolves is used:
    INCLUDE "local/Java.ccc" ! JAVA
 
 Including the same file twice is harmless — the second inclusion is skipped with
-a warning rather than duplicated.
+a warning rather than duplication.
 
 The preprocessor
 ----------------
 
 CongoCC has a preprocessor, modeled on the C# one, that runs over the grammar
-text before it is parsed and selects which lines are active. It is the tool for
-keeping target-language-specific or optional parts of a grammar in a single
+text before it is parsed and selects which lines are active. It can be used to
+keep target-language-specific or optional parts of a grammar in a single
 file.
 
 Directives occupy their own lines and begin with ``#``:
