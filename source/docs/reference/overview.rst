@@ -47,7 +47,7 @@ A few terms recur throughout this manual; they are defined fully in the
 :doc:`appendices/glossary`.
 
 Grammar
-   The complete description of a language, written in a ``.ccc`` file.
+   The complete description of a language, written in a ``.ccc`` file (:doc:`grammar-file`).
 
 Token / terminal
    An indivisible lexical unit produced by the lexer. Token types are declared

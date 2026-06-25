@@ -1,8 +1,8 @@
 Invocation
 ==========
 
-CongoCC is run from the executable JAR. This chapter is the reference for its
-command line, environment, and exit behavior. For installing the JAR see
+CongoCC is run from its executable JAR. This chapter is the reference for CongoCC's
+command line and runtime environment. For JAR installation instructions, see
 :doc:`/docs/userguide/installation`.
 
 Basic usage
@@ -52,10 +52,12 @@ working offline or in automated builds.
 Overriding settings from the environment
 ----------------------------------------
 
-Settings may be overridden outside the grammar file. An environment variable
-named ``CONGOCC_<SETTING>`` overrides that setting, and a ``-p`` symbol of the
-form ``SETTING=value`` does the same from the command line. When a setting is
-specified in more than one place, the order of priority is:
+Settings in the grammar file take the form ``SETTING=value``. 
+See the :doc:`settings` for the list of all available settings. 
+Grammar file settings can be overridden by environment variables or by command-line flags. 
+An environment variable named ``CONGOCC_<SETTING>`` overrides that setting in the grammar file. 
+A command-line flag of the form ``-p SETTING=value`` does the same from the command line. 
+When a setting is specified in more than one place, the order of priority is:
 
    grammar file < environment variable < command line
 
@@ -65,8 +67,8 @@ flag without editing the grammar.
 Exit status
 -----------
 
-CongoCC exits ``0`` on success and with a non-zero status on failure — a usage
-error (no input file, an unreadable grammar, a bad flag argument) or errors
+CongoCC exits ``0`` on success and with a non-zero status on failure.  Failures include usage
+errors (no input file, an unreadable grammar, a bad flag argument) or errors
 detected in the grammar itself. On success it lists each generated file and
 finishes with ``Parser generated successfully.``
 
