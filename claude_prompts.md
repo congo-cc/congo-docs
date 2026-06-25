@@ -36,7 +36,28 @@ Once we understand the information required to be in the new CongoCC documentati
 
 ## Proposal
 
-Please analyze the JavaCC, JavaCC21 and CongoCC documentation and related material and specify what the up-to-date CongoCC documentation will include. Propose for review different ways to organize the following generated documentation:
+Please analyze the JavaCC, JavaCC21 and CongoCC documentation and related material and specify what the up-to-date CongoCC documentation should include. Propose for review different ways to organize that informatin in the following documents:
 
 1. Reference Manual - to include complete, detailed explanation of syntax and semantics of CongoCC grammar, command line options, environment variables, target language support, etc.
-2. User Guide - to include development/testing strategies, syntactic idioms, best practices, in-depth explanations of features, support for the different target lanaguages, error messages, etc.   
+2. User Guide - to include development/testing strategies, syntactic idioms, best practices, in-depth explanations of features, support for the different target lanaguages, error messages, references to examples, etc.   
+
+
+# Responses to Claude Questions
+
+Below are answers to the 7 questions.
+
+1. The same grammar definition can essentially be used to generate parsers in any of the 4 target languages, the main difference being the language of any injected code.  For example, Rust parsers include generated FIXME.md and inject.rs files to document where handwritten Rust code needs to be inserted.  Let's go with a third top-level "Target Language Guide" to centralize target language usage in one place.
+
+2. Let's go with Sphinx versionadded/versionchanged directives keyed to dates.
+
+3. Yes, let's handle migration with one appendix (mapping tables + converter workflow) in the Reference Manual plus one User Guide migration chapter.
+
+4. Please document fault-tolerance as a normal chapter flagged experimental.
+
+5. Hand-write to start, but let's generate an extraction tool written in Java for future use.
+
+6. Jonathan Revusky will review the documentation before publication.  This repo's output will mostly likely be published on [Read The Docs](https://about.readthedocs.com/).
+
+7. Rust support is no longer provisional.  We even have a grammar for the Rust language itself (examples/rust/Rust.cc).
+
+When developing the plan for review, note that source code changes to CongoCC have been committed in the past 2 weeks. 

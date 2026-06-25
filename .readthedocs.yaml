@@ -1,0 +1,20 @@
+# Read the Docs build configuration.
+# https://docs.readthedocs.io/en/stable/config-file/v2.html
+#
+# This project is managed with uv, so we drive the build with explicit
+# commands: install uv, sync the locked dependency set, then run sphinx-build.
+# NOTE (provisional): pyproject requires Python >= 3.14; uv fetches a matching
+# interpreter during `uv sync`. The `tools.python` below only bootstraps uv.
+version: 2
+
+build:
+  os: ubuntu-24.04
+  tools:
+    python: "3.13"
+  commands:
+    - pip install uv
+    - uv sync --frozen
+    - uv run sphinx-build -b html source $READTHEDOCS_OUTPUT/html
+
+# The theme is intentionally left at the Sphinx default for now; revisit when
+# the theme decision is finalized (see plan.md).

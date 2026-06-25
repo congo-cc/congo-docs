@@ -1,21 +1,39 @@
-.. congocc-docs documentation master file, created by
-   sphinx-quickstart on Thu Jun 11 19:26:10 2026.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. CongoCC documentation master file.
 
-congocc-docs documentation
-==========================
+CongoCC Documentation
+=====================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+CongoCC is a recursive-descent parser generator that produces parsers in
+**Java, Python, C#, and Rust** from a single grammar. This documentation is
+organized into three guides:
 
+* the **Reference Manual** — the complete, precise description of the grammar
+  language, command-line interface, settings, and generated API;
+* the **User Guide** — tutorials, how-to guides, and explanations for getting
+  real parsing work done;
+* the **Target Language Guide** — everything specific to generating and using
+  parsers in each supported target language.
+
+.. note::
+
+   CongoCC ships as a continuously updated tool rather than as numbered
+   releases. Where a feature's availability matters, the page marks it with a
+   date — for example, *Added 2026-06-19*.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Table of Contents
+   :caption: Reference Manual
 
-   docs/reference/reference.rst
-   
-   
+   docs/reference/reference
 
+.. toctree::
+   :maxdepth: 2
+   :caption: User Guide
+
+   docs/userguide/userguide
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Target Language Guide
+
+   docs/targets/targets
