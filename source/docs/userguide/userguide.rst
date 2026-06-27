@@ -15,8 +15,8 @@ Installation and the tutorial, then dip into the how-to guides as needed.
    :caption: Tutorial
 
    tutorial/first-grammar
-   tutorial/json
    tutorial/calculator
+   tutorial/json
    tutorial/beyond
 
 .. toctree::

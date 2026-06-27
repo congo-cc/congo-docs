@@ -3,11 +3,19 @@ Your First Grammar
 
 This tutorial walks through the whole CongoCC cycle on a deliberately tiny
 language: writing a grammar, generating a parser from it, and then compiling
-and running that parser to see the syntax tree it builds. It assumes you have
-the ``congocc.jar`` and a JDK 17+ on your path (see :doc:`../installation`).
+and running that parser to see the syntax tree it builds. The language we will 
+parse is a comma-separated list of integers, such as ``1, 2, 3``. 
 
-The language we will parse is a comma-separated list of integers, such as
-``1, 2, 3``.
+This tutorial
+assumes you have the ``congocc.jar`` and a JDK 17+ on your path 
+(see :doc:`../installation`).
+
+.. note::
+
+   More complex examples are available in the ``examples/`` directory of the 
+   source code repository, including the examples for the different target languages.
+   These examples are automatically built and tested when `ant test` is run 
+   (see :doc:`../installation`).
 
 Writing the grammar
 -------------------

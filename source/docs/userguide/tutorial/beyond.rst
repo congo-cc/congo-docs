@@ -20,7 +20,7 @@ its ``examples/`` directory. A good progression is:
 3. **Python** — adds indentation-sensitive lexing, a genuine challenge that
    shows synthetic tokens and context-sensitive tokenization
    (:doc:`/docs/reference/tokenization-advanced`) in earnest.
-4. **Java** and **C#** — full industrial languages. These are the most complex
+4. **Java**, **C#**, and **Rust** — full industrial languages. These are the most complex
    grammars and the best demonstration of lookahead, code injection, and large
    grammar organization with ``INCLUDE``.
 
