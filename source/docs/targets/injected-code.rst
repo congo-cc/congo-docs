@@ -4,8 +4,9 @@ Injected Code Across Languages
 Embedded actions (``{ … }``) and :doc:`INJECT </docs/reference/injection>`
 blocks contain code in the **target language**. That makes them the one part of
 a grammar that is not target-neutral: a grammar that embeds Java works only for
-Java until the embedded code is ported or guarded. This chapter explains how
-injection maps onto each target and how to keep a grammar multi-target.
+parsers generated in Java unless the embedded code is ported or guarded. This 
+chapter explains how injection maps onto each target and how to keep a grammar 
+multi-target.
 
 The per-type model (Java, Python, C#)
 -------------------------------------
@@ -24,7 +25,7 @@ by ``NodeId`` — so there are no per-type node structs to inject into. Code tha
 other targets would put in a node class must instead be written against the
 ``(&Ast, NodeId)`` pair that identifies a node in the arena.
 
-To bridge this, CongoCC's Rust generator attempts a mechanical Java-to-Rust
+To bridge this difference, CongoCC's Rust generator attempts a mechanical Java-to-Rust
 translation of each ``INJECT`` block and writes the results to two files in the
 generated crate:
 
@@ -53,7 +54,7 @@ injection-heavy ones (Java, C#, Python) need substantial manual work for Rust.
 Keeping a grammar multi-target
 ------------------------------
 
-Two approaches keep one grammar usable for several targets:
+There are two approaches that allow a single grammar to target multiple languages:
 
 - **Guard with the preprocessor.** Wrap each language's injected code in
   ``#if __java__`` / ``#if __python__`` / ``#if __csharp__`` / ``#if __rust__``
