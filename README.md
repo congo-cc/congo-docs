@@ -128,8 +128,36 @@ The output is written to `build/html/`; open `build/html/index.html`.
 - Because CongoCC has no numbered releases, mark a feature's availability with
   an ISO date using the standard directives, e.g. `.. versionadded:: 2026-06-19`
   (these are configured to render as "Added 2026-06-19").
-- The Settings Reference is kept in sync with the CongoCC source by a small
-  helper — see [`tools/settings-extractor/`](tools/settings-extractor/).
+- The Settings Reference is kept in sync with the CongoCC source by the
+  **SettingsExtractor** tool — see [Maintenance tools](#maintenance-tools) below.
+
+## Maintenance tools
+
+The `tools/` directory holds small utilities for keeping the documentation
+accurate.
+
+### SettingsExtractor
+
+[`tools/settings-extractor/SettingsExtractor.java`](tools/settings-extractor/)
+keeps the Settings Reference (`source/docs/reference/settings.rst`) in sync with
+the CongoCC source. It reads the authoritative list of recognized settings from
+CongoCC's `AppSettings.java` and can diff it against the documentation, flagging
+any setting that is current in the source but missing from the docs (and listing
+documented names that are no longer settings).
+
+It is a single-file Java program — no build step — and needs only a JDK 17+:
+
+```sh
+# Report any current setting that the docs do not cover
+# (exits non-zero if any are missing — usable as a CI check):
+java tools/settings-extractor/SettingsExtractor.java \
+     /path/to/congocc/src/java/org/congocc/app/AppSettings.java \
+     --diff source/docs/reference/settings.rst
+```
+
+See [`tools/settings-extractor/README.md`](tools/settings-extractor/README.md)
+for the other modes (a plain listing, a reStructuredText table export, and
+built-in self-tests).
 
 ## Publishing
 
