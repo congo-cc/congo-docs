@@ -15,7 +15,10 @@ assumes you have the ``congocc.jar`` and a JDK 17+ on your path
    More complex examples are available in the ``examples/`` directory of the 
    source code repository, including the examples for the different target languages.
    These examples are automatically built and tested when `ant test` is run 
-   (see :doc:`../installation`).
+   (see :doc:`../installation`).  
+   
+   See :doc:`../../targets/examples-matrix` 
+   for a description of the examples shipped with CongoCC.
 
 Writing the grammar
 -------------------
