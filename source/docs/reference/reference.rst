@@ -30,3 +30,4 @@ language-specific details see the Target Language Guide.
    appendices/meta-grammar
    appendices/legacy
    appendices/glossary
+   appendices/project-history

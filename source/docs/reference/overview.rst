@@ -3,18 +3,11 @@ Overview
 
 `CongoCC <https://parsers.org>`_ is a parser generator. Users describe a language in a **grammar file**,
 and CongoCC generates source code — a lexer, a parser, and a set of syntax-tree
-classes — that reads text in that language and generates an abstract syntax tree that 
-your application can then process. It is a recursive-descent generator that can produce 
+classes — that reads text in that language and generates an abstract syntax tree that
+your application can then process. It is a recursive-descent generator that can produce
 parsers in **Java**, **Python**, **C#**, and **Rust** from the same grammar.
 
-A Short History
----------------
-
-CongoCC was originally developed as a fork of `JavaCC21 <https://github.com/javacc21/javacc21>`_, 
-which was itself a fork of the original `JavaCC <https://javacc.github.io/javacc/>`_.  ConngoCC's goal is
-to provide a more modern and flexible approach to parser generation. It has since evolved 
-to support multiple target languages and has been used in various projects requiring 
-custom language processing.  CongoCC source code is `here <https://github.com/congo-cc/congo-parser-generator>`_.
+CongoCC has a surprisingly long and interesting (*we think so*) history that you can read about. (see :doc:`appendices/project-history`).
 
 The processing model
 --------------------
